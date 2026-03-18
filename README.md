@@ -1,17 +1,5 @@
 <h1 align="center">🩺 Skin Disease Recognition System</h1>
 
-<p align="center">
-  <img src="results/grad_cam_melanoma.png" alt="Grad-CAM Visualization" width="500"/>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-Web%20API-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Model-EfficientNetV2-orange?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/10%20Classes-Skin%20Diseases-brightgreen?style=for-the-badge" />
-</p>
-
 > An intelligent, AI-powered web diagnostic application that recognizes 10 common skin diseases from a single uploaded photo — with visual explanations and easy-to-understand medical advice for everyone.
 
 ---
