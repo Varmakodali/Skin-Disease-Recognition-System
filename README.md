@@ -1,6 +1,6 @@
-<h1 align="center">🩺 Skin Disease Recognition System</h1>
+<h1 align="center">🩺 Skin Disease Recognition System
 
-> An intelligent, AI-powered web diagnostic application that recognizes 10 common skin diseases from a single uploaded photo — with visual explanations and easy-to-understand medical advice for everyone.
+> An intelligent, AI-powered web diagnostic application that recognizes 10 common skin diseases from a single uploaded photo — with visual explanations and easy-to-understand medical advice for everyone.</h1>
 
 ---
 
