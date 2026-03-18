@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.pyc
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual Environments
+venv/
+env/
+.env
+.venv
+
+# Dataset — too large for GitHub
+data/
+data_processed/
+
+# Trained Model Weights — too large for GitHub
+models/*.pth
+
+# Results / Logs
+results/error.log
+
+# Jupyter Notebooks checkpoints
+notebooks/.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
