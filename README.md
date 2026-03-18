@@ -248,4 +248,3 @@ This project is open-source and available under the **MIT License**.
 
 ---
 
-<p align="center">Made with ❤️ using PyTorch & FastAPI</p>
