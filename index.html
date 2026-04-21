@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Disease Recognition System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav>
+        <div class="logo">Skin<span> Disease Recognition System</span></div>
+        <div class="nav-links">
+            <a href="#" class="active">Diagnostics</a>
+            <a href="#">About AI</a>
+            <a href="#">Security</a>
+        </div>
+    </nav>
+
+    <main>
+        <header>
+            <h1>Skin Disease <span>Recognition System</span></h1>
+            <p>Upload a dermoscopic image to receive a high-precision diagnostic analysis powered by EfficientNetV2-L
+                and Grad-CAM explainability.</p>
+        </header>
+
+        <section class="upload-section">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('upload')">File Upload</button>
+                <button class="tab-btn" onclick="switchTab('camera')">Live Camera</button>
+            </div>
+
+            <div class="upload-card" id="drop-zone">
+                <input type="file" id="file-input" hidden accept="image/*">
+                <div id="upload-view">
+                    <div class="upload-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 16V8M12 8L9 11M12 8L15 11" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M3 15V16C3 18.2091 4.79086 20 7 20H17C19.2091 20 21 18.2091 21 16V15M3 9V8C3 5.79086 4.79086 4 7 4H17C19.2091 4 21 5.79086 21 8V9"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3>Drag & Drop Image</h3>
+                    <p>or click to browse from device</p>
+                </div>
+
+                <div id="camera-view" class="hidden">
+                    <video id="video" autoplay playsinline></video>
+                    <canvas id="canvas" hidden></canvas>
+                    <div class="camera-overlay"></div>
+                </div>
+
+                <div id="file-name" class="file-name"></div>
+            </div>
+            <button id="analyze-btn" class="btn-primary" disabled>Start Analysis</button>
+            <button id="capture-btn" class="btn-primary hidden">Capture & Analyze</button>
+        </section>
+
+        <section class="results-section hidden" id="results">
+            <div class="grid-layout">
+                <div class="card diagnosis-card">
+                    <h2>Diagnostic Results</h2>
+                    <div class="main-result">
+                        <h3 id="top-prediction">---</h3>
+                        <div class="confidence-badge" id="top-confidence">--%</div>
+                    </div>
+                    <div class="prob-list" id="prob-list">
+                        <!-- Probability items will be injected here -->
+                    </div>
+                </div>
+
+                <div class="card explainability-card">
+                    <h2>Visual Explanation</h2>
+                    <p class="card-hint">Heatmap highlighting regions influencing the AI's decision.</p>
+                    <div class="image-compare">
+                        <div class="img-container">
+                            <span>Original Image</span>
+                            <img id="original-preview" src="" alt="Original">
+                        </div>
+                        <div class="img-container">
+                            <span>Focus Map</span>
+                            <img id="heatmap-preview" src="" alt="Heatmap">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card report-card full-width">
+                    <h2>Medical Insight & Prevention</h2>
+                    <div class="report-content">
+                        <div class="report-text">
+                            <div class="report-group">
+                                <h3>Root Causes</h3>
+                                <p id="disease-causes">---</p>
+                            </div>
+                            <div class="report-group">
+                                <h3>Key Precautions</h3>
+                                <ul id="disease-precautions">
+                                    <!-- Precautions injected here -->
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <button class="btn-secondary" onclick="resetUI()">Analyze Another Image</button>
+        </section>
+    </main>
+
+    <div class="loader-overlay hidden" id="loader">
+        <div class="loader"></div>
+        <p>Analyzing Neural Pathways...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
